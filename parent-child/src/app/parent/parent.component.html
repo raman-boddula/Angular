@@ -1,3 +1,6 @@
 <h1>Parent Component</h1>
+<h1>Parent Counter : {{counter}} </h1>
+<button [disabled]="counter===10?true:false"  (click)="onInc()">Increment</button>
+<button [disabled]="counter?false:true" (click)="onDec()">Decrement</button>
 <button (click)="toggleChild()">{{!showChild?"Show Child Component":"Hide Child Component"}}</button>
 <app-child *ngIf="showChild"></app-child>
